@@ -1,0 +1,42 @@
+mixin logo 
+    a.logo
+        img(src="img/logo_planet.png", alt="logo")
+        h1.logo__text MISOCIAL
+
+mixin navigation(footer = "1")
+    nav.menu-line
+        +logo
+        ul.menu
+            li
+                a.menu__item(href="#") Home
+            li
+                a.menu__item(href="#") Why MISOCIAL
+            li
+                a.menu__item(href="#") Features
+            li
+                a.menu__item(href="#") Articles
+            li
+                a.menu__item(href="#") Pricing
+            li.menu__button
+                if footer == "1"
+                    a.main-button.transparent(href="#") get started
+                else if footer == "0"
+                    a.main-button.bottom(href="#") select plan
+
+
+mixin paragraph(label = "SOCIAL MARKETING & ANALYTICS")
+    .price-table 
+        h3.price-table__logo=label
+        h2.price-table__name Pricing Table
+        p.price-table__article Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+
+mixin tarif(firstFigure,number)
+    figure.tarif-figure
+        img.tarif-figure__img(src=firstFigure, alt="figureimage")
+        h3.tarif-figure__name personal
+        .price
+            p.price__number=number
+            p.price__month /month
+        p.tarif-figure__article Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.
+        .button
+            a.main-button(href="#") select plan

@@ -1,0 +1,39 @@
+footer
+    +navigation($logoColor: #37374a, $color: #756edc)
+
+    .bottom
+        color: $lightColor
+        background-color: #6e45e2
+.coperate
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 35px 0
+    border-top: 1px rgba(#bdbdc2, 0.200) solid
+
+.coperate__text
+    font-size: 14rem
+    font-weight: 500
+    color: #6a6a77
+    opacity: 0.502
+
+
+.footer-navigation
+    display: none
+    +media(1024)
+        display: block
+
+.coperate__socials
+    display: flex
+    gap: 15px
+    align-items: center
+
+.icon
+    height: 16px
+    width: 16px
+    cursor: pointer
+    fill: #b4b4bb
+    &:hover
+        fill: #6e45e2
+
+

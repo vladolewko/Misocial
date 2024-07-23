@@ -1,0 +1,91 @@
+@import helpers/vars
+@import helpers/mixins
+
+header
+    +navigation($logoColor: $lightColor, $color: $lightColor)
+    position: relative
+    height: 770px
+    width: 100%
+    background: linear-gradient(-60deg, rgba(#87d3cd, 0.388) 0%, #6d45e1 100%), url("../img/background_glasses.jpg") 0/cover
+
+.navigation
+    margin-bottom: 145px
+
+.burger
+    position: absolute
+    top: 40px
+    right: 10px
+    width: 50px
+    height: 45px
+    transition: .5s
+    +media(425)
+        right: 20px
+    +media(1024)
+        display: none
+
+.burger__span1,
+.burger__span2,
+.burger__span3
+    position: absolute
+    left: 0
+    width: 100%
+    height: 10px
+    background-color: $lightColor
+    border: 1px #000 solid
+    border-radius: 3px
+    -webkit-filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+
+.burger__span1
+    top: 0
+
+.burger__span2
+    top: 50%
+    transform: translateY(-50%)
+
+.burger__span3
+    bottom: 0
+
+.touched
+    top: 40px
+    right: 10px
+    transform: rotate(180deg)
+    +media(425)
+        right: 20px
+
+.arrow
+    position: absolute
+    left: 50%
+    bottom: 50px
+    transform: translate(-50%, 0)
+    width: 64px
+    height: 64px
+    border-radius: 32px
+    background-color: $lightColor
+    cursor: pointer
+    &::before
+        content: ""
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 2px
+        height: 16px
+        background-color: #9fa4af
+    &::after
+        content: ""
+        position: absolute
+        left: 27.7px
+        top: 47%
+        transform: rotate(-45deg)
+        width: 7px
+        height: 7px
+        border-bottom: 2px #9fa4af solid
+        border-left: 2px #9fa4af solid
+    &:hover
+        -webkit-filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+
+      
+.analytics
+    +paragraph($lightColor)
+
+

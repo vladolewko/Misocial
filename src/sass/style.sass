@@ -1,0 +1,156 @@
+@import helpers/vars
+@import helpers/mixins
+  
+@import  components/header
+@import  components/footer
+
+html
+    scroll-behavior: smooth
+    font-family: "Maven Pro"
+    font-size: 1px
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+li
+    list-style: none
+
+a
+    text-decoration: none
+
+.wrapper
+    width: 90%
+    margin: 0 auto
+
+.misocial
+    +paragraph(#4f4f6f)
+    margin: 100px 0
+
+.main-button
+        padding: 17px 50px
+        min-width: 230px
+        font-size: 12rem
+        letter-spacing: 1px
+        text-transform: uppercase
+        font-weight: 700
+        text-align: center
+        -webkit-filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+        border: 1px #d7dbe8 solid
+        border-radius: 25px
+        color: #c2c9db
+        background-color: $lightColor
+        transition: .3s
+        &:hover
+            color: #fff
+            background-color: #6e45e2
+            border-color: #6e45e2
+.transparent
+    background-color: transparent 
+    color: $lightColor
+    border-color: $lightColor
+
+.tarifs
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    gap: 50px
+    margin-bottom: 120px
+    +media(1024) 
+        flex-direction: row
+
+.choise
+    height: 522px
+    padding: 75px 0
+    text-align: center
+    background: linear-gradient(-60deg, rgba(#87d3cd, 0.388) 0%, #6d45e1 100%), url("../img/map_background.png") no-repeat 50% -50%/cover
+    +media(600)
+        padding: 175px 0
+
+.choise__logo
+    margin-bottom: 30px
+    font-size: 14rem
+    letter-spacing: 1px
+    text-transform: uppercase
+    font-weight: 700
+    color: $lightColor
+
+.choise__name
+    margin-bottom: 30px
+    font-size: 60rem
+    letter-spacing: -2px
+    font-weight: 500
+    text-align: center
+    color: $lightColor
+
+.choise__buttons
+    display: flex
+    flex-direction: column
+    justify-content: center
+    gap: 10px
+    +media(600)
+        flex-direction: row
+
+.tarif-figure
+    padding: 65px 20px
+    width: 100%
+    text-align: center
+    border: 1px solid #d7dbe8
+    border-radius: 30px
+    background-color: $lightColor
+    transition: .3s
+    overflow: hidden
+    &:hover
+        border-color: $lightColor
+        -webkit-filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+    +media(500)
+        padding: 65px
+    +media(1024)
+        min-width: 333px
+        width: 30%
+     
+.tarif-figure__img
+    margin-bottom: 50px
+
+.tarif-figure__name
+    margin-bottom: 30px
+    font-size: 14rem
+    letter-spacing: 1px
+    text-transform: uppercase
+    font-weight: 700
+    color: #9fa4af
+
+.tarif-figure__price
+    margin-bottom: 50px
+
+.price__number
+    position: relative
+    display: inline-block
+    margin-bottom: 50px
+    font-size: 60px
+    letter-spacing: -2px
+    font-weight: 500
+    text-align: center
+    color: #4f4f6f
+    &::before
+        content: "$"
+        position: absolute
+        top: 15px
+        left: -10px
+        font-size: 12rem
+
+.price__month
+    display: inline
+    font-size: 16rem
+    font-weight: 400
+    text-align: center
+    color: #4f4f6f
+
+.tarif-figure__article 
+    margin-bottom: 60px
+    font-size: 16rem
+    line-height: 28px
+    font-weight: 400
+    text-align: center
+    color: #9fa4af

@@ -1,0 +1,35 @@
+doctype html
+html(lang="uk")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/styles.css")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+        title Misocial
+    body 
+        include helpers/vars.pug
+        include helpers/mixins.pug
+        include helpers/svg.pug
+
+        include components/header.pug
+
+        main
+            .wrapper 
+                .misocial
+                    +paragraph("MIsocial")
+                .tarifs 
+                    +tarif(firstFigure,0)
+                    +tarif(secondFigure,29)
+                    +tarif(thirdFigure,49)
+            .choise#scrollto
+                .wrapper
+                    h3.choise__logo SOCAL MARKETING & ANALYTICS
+                    h2.choise__name Take control of your data
+                    .choise__buttons 
+                        a.main-button(href="#") get started
+                        a.main-button(href="#") explore features
+        include components/footer.pug
+        script(src="js/scripts.js")
