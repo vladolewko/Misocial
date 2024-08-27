@@ -1,3 +1,6 @@
+@mixin media($size)
+    @media screen and (min-width: #{$size}px)
+        @content
 @mixin navigation($logoColor: $lightColor, $color: $lightColor)
     .logo
         display: flex
@@ -75,7 +78,7 @@
 
     .menu__item
         position: relative
-        padding: 17px 15px 
+        padding: 17px 13px 
         text-decoration: none
         font-size: 16rem
         font-weight: 500
@@ -88,8 +91,8 @@
             top: 100%
             animation: slide .2s linear forwards
             background-color: $color
-        +media(1190)
-            padding: 18px 30px
+        +media(1240)
+            padding: 13px 30px
 
     @keyframes slide
         0%
@@ -101,11 +104,11 @@
             height: 1px
             width: 100%
 
-
 @mixin paragraph($color: $lightColor)
     .price-table
         text-align: center 
         color: $color
+        
     .price-table__logo
         position: relative
         display: inline-block
@@ -160,8 +163,3 @@
             max-width: 50%
         +media(1024)
             max-width: 30%
-
-
-@mixin media($size)
-    @media screen and (min-width: #{$size}px)
-        @content
